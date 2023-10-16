@@ -14,7 +14,7 @@ class Mode1Navigator:
         
 
         self.islands = mergesort(islands, key=lambda x: x.marines/x.money)
-        self.islands_ratio  = [i.money/i.marines for i in self.islands]
+        self.islands_ratio  = [i.marines/i.money for i in self.islands]
         self.crew = crew
 
     def select_islands(self) -> list[tuple[Island, int]]:
